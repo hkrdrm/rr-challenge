@@ -44,7 +44,7 @@ distribution is probably more random that the random generator .sample uses.
   end
 ```
 
-You are challenged to write a turbine utility that will distribute the elements of an array even across mutiple threads.
+You are challenged to write a turbine utility that will distribute the elements of an array evenly across mutiple threads.
 Your utility should take an array as an input and return an element of that array and maintain an even distribution across
 many threads.
 
