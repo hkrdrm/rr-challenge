@@ -1,8 +1,8 @@
 # Hacker Challenge - Multithreading Round-Robin
 ## reward $28 bonusly dollars
 
-Here's our the worker that processes our bandwidth stuff. It runs on multiple worker boxes and each box runs 25 thread, so if 5 worker boxes
-mutiplied by 25 threads gives us 125 threads.
+Here's the worker that processes our bandwidth stuff. It runs on multiple worker boxes and each box runs 25 threads per Shoryuken worker,
+so if we have 5 worker boxes mutiplied by 25 threads gives us 125 threads.
 
 ```ruby
 class BlastBandwidthWorker
@@ -22,9 +22,9 @@ class BlastBandwidthWorker
 end
 ```
 
-Here's our send_message method; we store the districts phone numbers (5 per district) in the districts table's meta field. Notice the .sample I'm
+Here's our send_message method; we store the district's phone numbers (5 per district) in the districts table's meta field. Notice the .sample I'm
 using here is a random approach to distributing the load across the phone numbers. If you run some test across a histogram you can see the
-distribution is probably more random that the random generator .sample uses.
+distribution is probably more random than the random generator .sample uses.
 
 ```ruby
   def send_message(blast_id:, to:, message:)
